@@ -11,7 +11,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" >
+    <link rel="stylesheet" href="css/main.css" >
 </head>
 <body>
     <div class="container">
@@ -45,7 +45,7 @@
 
 
                     <div class="col-md-4">
-                        <img class="profile rounded-circle" src="static/profile.jpg" alt="">
+                        <img class="profile rounded-circle" src="img/profile.jpg" alt="">
                     </div>
                     <div class="col-md-8">
                         <h1 class="display-4" id="lblName">Ismael Avidan Gomez Perez</h1>
@@ -238,10 +238,9 @@
           </div>
     </div>
 
-<script src="{{url_for('static',filename='jquery.js')}}" ></script>
+<script src="js/jquery.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="{{url_for('static',filename='main.js')}}" ></script>
-<script src="{{url_for('static',filename='getData.js')}}" ></script>
+<script src="js/getData.js" ></script>
 </body>
 </html>
