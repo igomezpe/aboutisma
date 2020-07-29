@@ -1,0 +1,13 @@
+.progress-bar {
+    width: 0%;
+}
+.botones{
+    padding: 10px;
+    align-items: center;
+}
+.reproductorDiv{
+}
+
+.btnDown{
+    margin-right: 20px;
+}
