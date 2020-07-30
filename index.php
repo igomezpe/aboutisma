@@ -1,5 +1,25 @@
+<?php
+    function contador()
+    {
+        $archivo = "contador.txt"; //el archivo que contiene en numero
+        $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
+        if($f)
+        {
+            $contador = fread($f, filesize($archivo)); //leemos el archivo
+            $contador = $contador + 1; //sumamos +1 al contador
+            fclose($f);
+        }
+        $f = fopen($archivo, "w+");
+        if($f)
+        {
+            fwrite($f, $contador);
+            fclose($f);
+        }
+        return $contador;
+    }
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -24,6 +44,10 @@
   <body>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <span class="navbar-brand mb-0 h1">Rolitas</span>
+
+      <div class="ml-5" id="numberVisits">
+        Visitas : <?php echo contador(); ?>
+      </div>
     </nav>
 
     <div class="container mt-3">

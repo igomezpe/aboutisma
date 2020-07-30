@@ -17,7 +17,7 @@ $(function () {
   var audio = $("#audio");
   var music = [];
 
-$("#btnDownload").hide();
+  $("#btnDownload").hide();
 
   $("#btnSubir").click(function (e) {
     e.preventDefault();
@@ -31,8 +31,6 @@ $("#btnDownload").hide();
 
   getSongs();
   setMusic();
-
-
 
   $("#btnPlay").click(function (e) {
     e.preventDefault();
@@ -52,18 +50,17 @@ $("#btnDownload").hide();
   });
 
   function playSong(id) {
-    
     console.log(music[id]);
     audio.attr("src", music[id].data().url);
-    $("#songName").html( music[id].data().name);
+    $("#songName").html(music[id].data().name);
     $("#btnDownload").attr("href", music[id].data().url);
     $("#btnDownload").attr("download", music[id].data().name);
     audio[0].play();
   }
 
-  function removeclass() { 
-      $("#listSongs li").removeClass("bg-info");
-   }
+  function removeclass() {
+    $("#listSongs li").removeClass("bg-info");
+  }
 
   function getSongs() {
     $("#listSongs").empty();
@@ -72,13 +69,17 @@ $("#btnDownload").hide();
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            i += 1;
-            $("#listSongs").append("<li class='list-group-item' id ='"+ i +"'>" + doc.data().name + "</li>");
-            audio.attr("src", doc.data().url);
-            $("#songName").html(doc.data().name);
+          i += 1;
+          $("#listSongs").append(
+            "<li class='list-group-item' id ='" +
+              i +
+              "'>" +
+              doc.data().name +
+              "</li>"
+          );
+          audio.attr("src", doc.data().url);
+          $("#songName").html(doc.data().name);
         });
-
-
 
         $("#listSongs li").click(function (e) {
           e.preventDefault();
@@ -91,23 +92,15 @@ $("#btnDownload").hide();
       });
   }
 
-  function setMusic() { 
+  function setMusic() {
     db.collection("rolitas")
-    .get()
-    .then((query) => {
-
-        query.forEach( (item) => {
-            music.push(item);
-        });    
-    });
-
-
-
-   }
-
-
-
-
+      .get()
+      .then((query) => {
+        query.forEach((item) => {
+          music.push(item);
+        });
+      });
+  }
 
   function lookFiles() {
     $("#Archivo").attr("disabled", true);
