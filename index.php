@@ -54,7 +54,7 @@
       <!-- Button trigger modal accept=".mp3"-->
       <div class="jumbotron">
         <h3>Upload Rolitas</h3>
-        <input type="file" id="Archivo" accept=".mp3" />
+        <input type="file" id="Archivo" class="form-control-file" accept=".mp3" />
         <button class="btn btn-info" id="btnSubir">
           <span class="material-icons">
             cloud_queue
@@ -99,12 +99,12 @@
               <button type="button" class="btn btn-outline-info controlrepo" id="btnAnterior">
                 <span class="material-icons">navigate_before</span>
               </button>-->
-              <button type="button" class="btn btn-outline-info controlrepo" id="btnPause">
+              <button type="button" class="btn btn-outline-info" id="btnPause">
                 <span class="material-icons">
                   pause
                 </span>
               </button>
-              <button type="button" class="btn btn-outline-info controlrepo" id="btnPlay">
+              <button type="button" class="btn btn-outline-info" id="btnPlay">
                 <span class="material-icons">
                   play_arrow
                 </span>
@@ -116,7 +116,7 @@
 
           </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 mt-3">
           <div class="row">
             <h3>Lista de Rolitas</h3>
             <a class="btn btn-success ml-auto btnDown" target="_blank" id="btnDownload"> Download <span class="material-icons">
